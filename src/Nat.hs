@@ -133,4 +133,21 @@ b ^ n = iter 1 b n
    iter 16 4 1
    iter 64 4 0
    64
+
+   b ^ 8 = (((((((1 * b)* b)* b)* b)* b)* b)* b) * b
+   b ^ 2 = b * b
+   b ^ 4 = (b * 2) * (b ^ 2)
+   b ^ 8 = (b ^ 4) * (b ^ 4)
+
+   b^2n = (b^n)^2
+   b^(2n+1) = b * b^2n
 -}
+-- 2^n = exp 2 n
+-- expo :: Natural -> Natural -> Natural
+-- expo b n
+--    | n == 0   = 1
+--    | even n   = expo (square b) (n `div` 2))
+--    | otherwise = b * expo b (pred n)
+
+-- square :: Natural -> Natural
+-- square n = n * n
